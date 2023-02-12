@@ -1,0 +1,111 @@
+:root {
+  --orange: #EE6C4D;
+  --white: #E0FBFC;
+  --blue: #98C1D9;
+  --black: #243763;
+  --light-white: #EDEEF7;
+  --font: 'Space Grotesk', sans-serif; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: var(--font);
+  font-size: 1.6rem;
+  background-color: var(--light-white);
+}
+
+header {
+  text-align: center;
+  margin: 5rem;
+}
+
+fieldset {
+  border: none;
+}
+
+/*
+* Globals
+*/
+.btn {
+  border: none;
+  border-radius: 50%;
+  font-size: 5rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.calc-legend {
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+.calc {
+  background-color: var(--black);
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+.display {
+  background-color: var(--blue);
+  border: none;
+  border-radius: .2rem;
+  font-size: 10rem;
+  display: block; 
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.body-calc {
+  display: flex;
+  flex-direction: row;
+}
+
+.number-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.operations-group {
+  display: grid;
+  gap: 2rem;
+}
+
+.btn-number {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.btn-operator {
+  background-color: var(--orange);
+}
+
+@media (min-width: 728px) {
+  .calc {
+    max-width: 40%;
+  }
+}
