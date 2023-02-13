@@ -1,8 +1,10 @@
 :root {
+  --baby-blue: #C3E0E5;
   --orange: #EE6C4D;
   --white: #E0FBFC;
   --blue: #98C1D9;
   --black: #243763;
+  --dark-blue: #274472;
   --light-white: #EDEEF7;
   --font: 'Space Grotesk', sans-serif; 
 }
@@ -70,27 +72,33 @@ fieldset {
 }
 
 .display {
+  color: var(--black);
   background-color: var(--blue);
   border: none;
   border-radius: .2rem;
   font-size: 10rem;
-  display: block; 
-  margin-bottom: 5rem;
-  width: 100%;
+  margin: 5rem 0 5rem 0;
 }
 
-.body-calc {
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.specials {
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
 }
 
-.number-group {
+.numbers {
+  grid-column: 1 / 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.operations-group {
+.operators{
   display: grid;
   gap: 2rem;
 }
@@ -102,6 +110,10 @@ fieldset {
 
 .btn-operator {
   background-color: var(--orange);
+}
+
+.btn-total {
+  background-color: var(--baby-blue);
 }
 
 @media (min-width: 728px) {
