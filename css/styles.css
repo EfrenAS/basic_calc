@@ -3,8 +3,10 @@
   --orange: #EE6C4D;
   --white: #E0FBFC;
   --blue: #98C1D9;
-  --black: #243763;
-  --dark-blue: #274472;
+  --dark-blue: #243763;
+  --middle-blue: #274472;
+  --blue-gray: #5885AF;
+  --midnight-blue: #41729F;
   --light-white: #EDEEF7;
   --font: 'Space Grotesk', sans-serif; 
 }
@@ -52,14 +54,6 @@ fieldset {
   cursor: pointer;
 }
 
-.calc-legend {
-  color: var(--white);
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  text-align: right;
-  text-transform: uppercase;
-}
-
 .container {
   align-items: center;
   display: flex;
@@ -69,14 +63,22 @@ fieldset {
 }
 
 .calc {
-  background-color: var(--black);
+  background-color: var(--dark-blue);
   border-radius: .5rem;
   padding: 2rem;
 }
 
+.calc-legend {
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+
 .display {
-  color: var(--black);
-  background-color: var(--blue);
+  color: var(--baby-blue);
+  background-color: var(--middle-blue);
   border: none;
   border-radius: .2rem;
   font-size: 10rem;
@@ -85,38 +87,50 @@ fieldset {
 
 .keyboard {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "specials operators"
+                        "numbers operators";                  ;
   gap: 2rem;
 }
 
 .specials {
-  display: flex;
+  grid-area: specials;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
 .numbers {
-  grid-column: 1 / 2;
+  grid-area: numbers;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .operators{
+  grid-area: operators;
   display: grid;
+  grid-template-rows: repeat(5, 1fr);
   gap: 2rem;
 }
 
 .btn-number {
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--blue-gray);
+  background-color: var(--middle-blue);
 }
 
 .btn-operator {
-  background-color: var(--orange);
+  background-color: var(--midnight-blue);
+  color: var(--dark-blue);
 }
 
 .btn-total {
   background-color: var(--baby-blue);
+  color: var(--dark-blue);
+}
+
+.btn-cl-display {
+  background-color: var(--orange);
+  color: var(--dark-blue);
 }
 
 @media (min-width: 728px) {
