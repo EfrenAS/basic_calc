@@ -23,7 +23,7 @@ html {
 body {
   font-family: var(--font);
   font-size: 1.6rem;
-  background-color: var(--light-white);
+  background-color: var(--middle-blue);
 }
 
 header {
@@ -47,10 +47,11 @@ img {
   border: none;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   font-size: 5rem;
-  width: 8rem;
   height: 8rem;
+  justify-content: center;
+  user-select: none;
+  width: 8rem;
 }
 
 .btn:hover {
@@ -63,6 +64,14 @@ img {
   justify-content: center;
   margin: 0 auto;
   max-width: 120rem;
+}
+
+.md-font {
+  font-size: 5rem !important;
+}
+
+.sm-font {
+  font-size: 3rem;
 }
 
 .calc {
@@ -79,12 +88,13 @@ img {
   text-transform: uppercase;
 }
 
-.display {
+.display, .display--mini {
   color: var(--baby-blue);
   background-color: var(--middle-blue);
   border: none;
   border-radius: .2rem;
   font-size: 10rem;
+  height: 11rem;
   margin: 5rem 0 5rem 0;
   text-align: right;
 }
@@ -92,7 +102,7 @@ img {
 .keyboard {
   display: grid;
   grid-template-areas: "specials operators"
-                        "numbers operators";                  ;
+                        "numbers operators";
   gap: 2rem;
 }
 
